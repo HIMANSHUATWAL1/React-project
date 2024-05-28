@@ -24,3 +24,43 @@ lets us chache a function definition between re-render.
         if we want any reference.
 
         const passwordRef=useRef(default value)
+
+
+
+
+# <-------------------Custom Hooks--------------------------->
+
+import { useEffect,useState } from "react";
+
+ function useCurrencyInfo(currency){
+    const [data,setData]=useState({})
+    useEffect(()=>{
+        fetch( `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${currency}.json`)
+       .then((res)=>res.json())
+       .then((res)=>setData(res[currency]))
+
+       console.log(data);
+    },[currency])
+
+    console.log(data);
+
+    return data
+
+ }
+
+
+ export default useCurrencyInfo;
+
+
+
+
+# <----------------UseID Hook---------------------->
+
+Generating unique IDs that can be passed to accessbility attributes.
+
+
+const id=useId()
+
+
+
+ 
