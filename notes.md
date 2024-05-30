@@ -79,4 +79,42 @@ const id=useId()
  <Outlet/>   ---->  takes jsx component  as base and it changes dynammically any component with in it. 
 
 
- Loader------->If we want fetch data from any api then with the help of this we can directly call the api from here 
+ Loader()------->If we want fetch data from any api then with the help of this we can directly call the api from here 
+
+
+
+ # <----------------ContextAPI----------------------->
+
+
+ prop drilling---->
+
+ when we directly access the data /props from the globel object.
+
+
+ for this we use context api.
+
+
+ Redux--> Is used for structural state management.
+
+
+ Libraries for state management---->
+
+ Redux,react-Redux,zustand,Redux-toolkit(RTK)
+
+
+
+ # <----------creating userContext------------>
+
+ import React from "react";
+
+const userContext=React.createContext()
+
+
+export default userContext;
+
+here we use userContext as a "Provider" means using as a wrapper -->
+<userContext>
+// here every component has access of userContext or every state. 
+</userContext>
+
+ 
