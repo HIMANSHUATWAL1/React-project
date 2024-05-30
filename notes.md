@@ -63,4 +63,20 @@ const id=useId()
 
 
 
- 
+ # <-----------------React-Router-DOM------------------------->
+
+
+ Link--> used in place of anchor tag,
+ because using <a> tag our page will refresh and react haven't any concept .
+
+ (<Link to="/">)
+
+ NavLink---> 
+
+
+
+
+ <Outlet/>   ---->  takes jsx component  as base and it changes dynammically any component with in it. 
+
+
+ Loader------->If we want fetch data from any api then with the help of this we can directly call the api from here 
